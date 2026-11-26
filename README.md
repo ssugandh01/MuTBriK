@@ -156,10 +156,10 @@ Train the plain cross-entropy baseline from the ablation:
 python train.py --data_dir /path/to/MuTBriK --loss ce
 ```
 
-Or run both as a Weights & Biases sweep (set `--data_dir` in `configs/sweep.yaml` first):
+Or run both as a Weights & Biases sweep (set `--data_dir` in `config/sweep.yaml` first):
 
 ```
-wandb sweep configs/sweep.yaml
+wandb sweep config/sweep.yaml
 wandb agent <sweep-id>
 ```
 
@@ -195,7 +195,7 @@ MuTBriK/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-├── configs/sweep.yaml          # W&B sweep configuration
+├── config/sweep.yaml          # W&B sweep configuration
 ├── train.py                    # model training (CMR-CE loss)
 ├── inference/predict_india.py  # nationwide sliding-window inference
 ├── postprocessing/             # rasters → kiln centroids (GeoJSON), coming soon
