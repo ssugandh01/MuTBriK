@@ -169,12 +169,12 @@ Default setup from the paper: U-Net with an EfficientNet-B7 encoder trained from
 
 ## Nationwide inference
 
-`inference/predict_india.py` runs the trained model over full Sentinel-2 tiles with an overlapping sliding window (512 × 512 windows, 50% overlap). Softmax outputs of overlapping windows are averaged, and each pixel gets the most probable class. The output is one single-band GeoTIFF per tile with class IDs 0–5.
+`inference/predict_India.py` runs the trained model over full Sentinel-2 tiles with an overlapping sliding window (512 × 512 windows, 50% overlap). Softmax outputs of overlapping windows are averaged, and each pixel gets the most probable class. The output is one single-band GeoTIFF per tile with class IDs 0–5.
 
 Input tiles are 6-band GeoTIFFs in the order B2, B3, B4, B8, B11, B12. In the paper, these are annual median composites (cloud cover < 10%) over the non-monsoon months (January–May and September–December). NDVI and NDBI are computed inside the script.
 
 ```
-python inference/predict_india.py \
+python inference/predict_India.py \
     --input_dir  /path/to/sentinel2_tiles \
     --output_dir /path/to/predictions \
     --model_path /path/to/unet_b7_best_model.pth
@@ -197,7 +197,7 @@ MuTBriK/
 ├── requirements.txt
 ├── config/sweep.yaml          # W&B sweep configuration
 ├── train.py                    # model training (CMR-CE loss)
-├── inference/predict_india.py  # nationwide sliding-window inference
+├── inference/predict_India.py  # nationwide sliding-window inference
 ├── postprocessing/             # rasters → kiln centroids (GeoJSON), coming soon
 └── figures/
 ```
