@@ -25,10 +25,10 @@ We present the **first nationwide, multi-year maps of brick kilns in India (2019
 
 <table>
   <tr>
-    <td align="center"><img src="figures/fcbtk.png" width="150"><br>FCBTK</td>
-    <td align="center"><img src="figures/zigzag.png" width="150"><br>Zigzag</td>
-    <td align="center"><img src="figures/cbtk.png" width="150"><br>CBTK</td>
-    <td align="center"><img src="figures/rbtk.png" width="150"><br>RBTK</td>
+    <td align="center"><img src="figures/FCBTK.png" width="150"><br>FCBTK</td>
+    <td align="center"><img src="figures/zZigzag.png" width="150"><br>Zigzag</td>
+    <td align="center"><img src="figures/CBTK.png" width="150"><br>CBTK</td>
+    <td align="center"><img src="figures/RBTK.png" width="150"><br>RBTK</td>
     <td align="center"><img src="figures/DDK.png" width="150"><br>DDK</td>
   </tr>
 </table>
