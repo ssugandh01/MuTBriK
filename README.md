@@ -186,7 +186,7 @@ To run inference, first train a model with `train.py` (see [Training](#training)
 
 `postprocessing/` converts the predicted rasters into the kiln maps released on Zenodo: connected components are extracted, each kiln gets the majority class of its pixels, and its centroid is written to GeoJSON.
 
-TODO: usage instructions
+The post-processing code will be added to this folder soon.
 
 ## Repository structure
 
@@ -197,9 +197,8 @@ MuTBriK/
 ├── requirements.txt
 ├── configs/sweep.yaml          # W&B sweep configuration
 ├── train.py                    # model training (CMR-CE loss)
-├── data_download/              # Sentinel-2 composites from Google Earth Engine
 ├── inference/predict_india.py  # nationwide sliding-window inference
-├── postprocessing/             # rasters → kiln centroids (GeoJSON)
+├── postprocessing/             # rasters → kiln centroids (GeoJSON), coming soon
 └── figures/
 ```
 
