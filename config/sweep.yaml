@@ -1,5 +1,5 @@
 # W&B sweep reproducing the paper's ablation: CMR-CE vs. plain CE.
-# Usage:  wandb sweep configs/sweep.yaml  &&  wandb agent <sweep-id>
+# Usage:  wandb sweep config/sweep.yaml  &&  wandb agent <sweep-id>
 program: train.py
 method: grid
 metric:
