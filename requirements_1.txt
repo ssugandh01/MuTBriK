@@ -1,0 +1,12 @@
+torch
+torchvision
+segmentation-models-pytorch
+albumentations
+rasterio
+numpy
+pandas
+matplotlib
+seaborn
+torchmetrics
+tqdm
+wandb
