@@ -1,0 +1,37 @@
+# W&B sweep reproducing the paper's ablation: CMR-CE vs. plain CE.
+# Usage:  wandb sweep configs/sweep.yaml  &&  wandb agent <sweep-id>
+program: train.py
+method: grid
+metric:
+  name: val_mIoU_no_bg
+  goal: maximize
+command:
+  - ${interpreter}
+  - ${program}
+  - --data_dir=/path/to/MuTBriK   # change this
+  - ${args}
+parameters:
+  loss:
+    values: [cmr_ce, ce]
+  seed:
+    values: [1]
+  arch:
+    values: [unet_b7]
+  bands:
+    values:
+      - [1, 2, 3, 4, 5, 6, 7, 8]   # B2, B3, B4, B8, B11, B12, NDVI, NDBI
+  classes:
+    values:
+      - [0, 1, 2, 3, 4, 5]         # background + 5 kiln types
+  batch_size:
+    values: [16]
+  n_epochs:
+    values: [250]
+  initial_lr:
+    values: [0.001]
+  optimizer:
+    values: [adamw]
+  beta_penalty:
+    values: [5.0]
+  alpha_ema:
+    values: [0.2]
